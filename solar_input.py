@@ -99,8 +99,7 @@ def write_space_objects_data_to_file(output_filename, space_objects):
     """
     with open(output_filename, 'w') as out_file:
         for obj in space_objects:
-            massage = "{} {} {} {} {} {} {} {}".format(obj.type, obj.R, obj.color, obj.m, obj.x, obj.y, obj.vx, obj.vy)
-            out_file.write(massage)
+            print("%f %s %f %f %f %f %f" % (obj.R, obj.color, obj.m, obj.x, obj.y, obj.Vx, obj.Vy), file=out_file)
 
 if __name__ == "__main__":
     print("This module is not for direct call!")
